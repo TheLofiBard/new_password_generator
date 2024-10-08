@@ -24,3 +24,12 @@ function generate() {
     }
     passTwoEl.innerText = passTwo.join("")
 }
+
+passOneEl.addEventListener("click", function(){
+    passOneEl.select()
+    passOneEl.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(passOneEl.value);
+
+    alert("Copied to clipboard")
+})
